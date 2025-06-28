@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: 'WantedSans';
+    src: url('./assets/fonts/WantedSans-Regular.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WantedSans';
+    src: url('./assets/fonts/WantedSans-Medium.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WantedSans';
+    src: url('./assets/fonts/WantedSans-SemiBold.ttf') format('truetype');
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'WantedSans';
+    src: url('./assets/fonts/WantedSans-Bold.ttf') format('truetype');
+    font-style: normal;
+}
+
+body {
+    font-family: 'WantedSans', sans-serif;
+    color: #eeeeee;
+}
