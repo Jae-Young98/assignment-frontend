@@ -9,6 +9,8 @@ export const HomePage: React.FC = () => {
     const handleMenuClick = (label: string) => {
         if (label === "RESPONSIVE API") {
             navigate('/assignment/1');
+        } else if (label === "LIVE CHAT") {
+            navigate('/assignment/2');
         }
     };
 
