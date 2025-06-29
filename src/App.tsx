@@ -1,16 +1,17 @@
 import React from "react";
-import { Header } from "./components/Header";
-import { MenuButtons } from "./components/MenuButtons";
-// import { StepperSection } from "./components/StepperSection";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HomePage } from "./pages/HomePage";
+import { Assignment1Page } from "./pages/Assignment1Page";
 
-const App: React.FC = () => (
-  <div className="min-h-screen bg-[#0a0a0a] flex flex-col items-center justify-center">
-    <Header />
-    <div className="w-full bg-[#181818] h-[500px] flex items-center justify-center">
-      <MenuButtons />
-      {/* <StepperSection /> */}
-    </div>
-  </div>
-);
+const App: React.FC = () => {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/assignment/1" element={<Assignment1Page />} />
+      </Routes>
+    </Router>
+  );
+};
 
 export default App;
