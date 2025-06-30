@@ -15,7 +15,7 @@ const App: React.FC = () => {
         <Route path="/chat" element={<ChatRoomPage />} />
       </Routes>
     </Router>
-  );
+);
 };
 
 export default App;
