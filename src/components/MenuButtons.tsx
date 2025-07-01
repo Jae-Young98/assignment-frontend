@@ -7,8 +7,8 @@ interface MenuButtonsProps {
 const buttons = [
     { label: "RESPONSIVE API" },
     { label: "LIVE CHAT" },
-    { label: "WEB RTC" },
-    { label: "MONITORING" },
+    { label: "WEB RTC", disabled: true },
+    { label: "MONITORING", disabled: true },
 ];
 
 export const MenuButtons: React.FC<MenuButtonsProps> = ({ onMenuClick }) => (
@@ -16,12 +16,13 @@ export const MenuButtons: React.FC<MenuButtonsProps> = ({ onMenuClick }) => (
         {buttons.map((btn) => (
         <button
             key={btn.label}
-            className="flex items-center gap-2 bg-[#292929] hover:bg-[#313131] text-[#eeeeee] px-6 py-3 rounded-[4px] text-[24px] font-semibold transition cursor-pointer"
-            onClick={() => onMenuClick?.(btn.label)}
+            className={`flex items-center gap-2 bg-[#292929] text-[#eeeeee] px-6 py-3 rounded-[4px] text-[24px] font-semibold transition ${btn.disabled ? 'opacity-50 cursor-not-allowed' : 'cursor-pointer hover:bg-[#313131]'}`}
+            onClick={() => !btn.disabled && onMenuClick?.(btn.label)}
+            disabled={btn.disabled}
         >
             {btn.label}
             {/* 오른쪽 화살표 아이콘 */}
-            <span className="ml-2">{">"}</span>
+            <span className="ml-2">{" > "}</span>
         </button>
         ))}
     </div>
