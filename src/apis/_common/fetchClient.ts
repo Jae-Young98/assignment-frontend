@@ -1,4 +1,4 @@
-import { ResponseError } from '../../utils/responseError';
+// import { ResponseError } from '../../utils/responseError';
 
 import { BASE_URL } from '../../constants/api';
 
@@ -27,7 +27,7 @@ const createFetchClient = (baseUrl: string) => {
             // response 객체는 에러가 발생하면 데이터는 응답 객체가 되고, 정상적인 응답이 오면 데이터 객체가 된다.
             if (!response.ok) {
                 const errorData = await response.json();
-                throw new ResponseError(errorData);
+                throw new Error(errorData);
             }
     
             return response;
